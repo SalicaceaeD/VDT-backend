@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
   destination:
     namespace: vdt
-    server: "https://kubernetes.default.svc"
+    server: "https://193.168.49.3:32488"
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
