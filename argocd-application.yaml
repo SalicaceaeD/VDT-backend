@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/SalicaceaeD/VDT-backend.git"
+    path: argocd
+    targetRevision: HEAD
+  destination:
+    namespace: vdt
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
